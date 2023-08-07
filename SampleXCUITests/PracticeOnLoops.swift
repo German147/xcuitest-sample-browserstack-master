@@ -38,6 +38,20 @@ class PracticeOnLoops: XCTestCase{
     }
     
     
+    
+    func testSwipUpUntilContactBtnIsPresent()throws{
+        
+        app.launch()
+        app.buttons["Web View"].firstMatch.tap()
+    
+        
+        let contactBtn = app.buttons["Contact Us"]
+        while contactBtn.exists{
+            app.swipeUp()
+        }
+        contactBtn.firstMatch.tap()
+    }
+    
 
     
 }
